@@ -139,8 +139,8 @@ classdef MBeautify
                     currentEditorPage.Selection = lineBeforePosition;
                     lineBeforeText = currentEditorPage.SelectedText;
                 end
+                expandedSelection = [lineBeforePosition(1), 1, expandedSelection(3), Inf];
             end
-            expandedSelection = [lineBeforePosition(1), 1, expandedSelection(3), Inf];
 
             % Search for the first empty line after the selection
             lineAfterSelection = [currentSelection(3) + 1, 1, currentSelection(3) + 1, Inf];
